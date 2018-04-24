@@ -98,7 +98,7 @@ switch ($_GET['action']) {
       
       if ($p->validate_ipn()) {
           
-         // Payment has been recieved and IPN is verified.  This is where you
+         // Payment has been received and IPN is verified.  This is where you
          // update your database to activate or process the order, or setup
          // the database with the user's order details, email an administrator,
          // etc.  You can access a slew of information via the ipn_data() array.
@@ -109,9 +109,9 @@ switch ($_GET['action']) {
          // in the ipn_data() array.
   
          // For this example, we'll just email ourselves ALL the data.
-         $subject = 'Instant Payment Notification - Recieved Payment';
+         $subject = 'Instant Payment Notification - received Payment';
          $to = 'YOUR EMAIL ADDRESS HERE';    //  your email
-         $body =  "An instant payment notification was successfully recieved\n";
+         $body =  "An instant payment notification was successfully received\n";
          $body .= "from ".$p->ipn_data['payer_email']." on ".date('m/d/Y');
          $body .= " at ".date('g:i A')."\n\nDetails:\n";
          

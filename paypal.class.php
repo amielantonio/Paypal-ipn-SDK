@@ -45,7 +45,7 @@ class paypal_class {
    var $sandbox;
 
    
-   function paypal_class($sandbox = FALSE) {
+   function __construct($sandbox = FALSE) {
        
       // initialization constructor.  Called when class is created.
       
